@@ -1,0 +1,342 @@
+*{
+	margin: 0;
+	padding: 0;
+	outline: 0;
+	box-sizing: border-box;
+	font-family: arial;
+}
+body{
+	background-color: #000;
+}
+
+.interface{
+	display: flex;
+	flex-flow: column;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+}
+.interface > main, .interface > header, .interface > footer{
+	width: 100%;
+	height: 30px;
+	padding: 7px 10%;
+}
+
+.interface footer a{
+	color: #F2E205;
+	text-decoration: none;
+}
+
+.interface footer a:hover{
+	text-decoration: underline;
+}
+
+.interface > footer, .interface > header{
+	/*background-color: #06111C;*/
+	background-color: #000;
+	/*background-image: linear-gradient(to right, #102D4A,#06111C);*/
+	color: #BB2020;
+}
+
+.interface > header{
+	height: 100px;
+	border-bottom: solid #F2E205 5px;
+}
+
+.interface > header h1{
+	color: #C0C0C0;
+	text-shadow: 1px 1px 2.5px #f2e205, 1px 1px 7px #f2e205;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+	transition: text-shadow 0.5s;
+	text-decoration: none;
+}
+.interface > header h1 a{
+	font-size: 1em;
+	cursor: pointer;
+	color: #C0C0C0;
+	text-shadow: 1px 1px 2.5px #f2e205, 1px 1px 7px #f2e205;
+	cursor: pointer;
+	transition: text-shadow 0.5s;
+	text-decoration: none;
+}
+.interface > header h1 a:hover{
+	text-shadow: 1px 1px 10px #f2e205, 1px 1px 20px #f2e205, 1px 1px 30px #f2e205;
+}
+
+.interface > main{
+	height: calc(100% - 200px);
+	background-color: #fbfbfb;
+	padding: 0;
+	background-image: url('background.jpg');
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	overflow: auto;
+
+}
+.interface > main .background{
+	background-color: rgba(0,0,0,0.7);
+	height: 100%;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+}
+
+.interface > footer{
+	padding-top: 20px;
+	border-top: solid #F2E205 5px;
+	height: 100px;
+}
+.interface > footer p{
+	color: #fff;
+	margin-bottom: 10px;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+}
+
+.background header{
+	color: #fff;
+	margin: 20px 0 40px 0;
+	height: 50px;
+	width: 100%;
+}
+.background h2{
+	text-shadow: 1px 1px 2px #000;
+}
+
+.background header h2{
+	font-size: 2.6em;
+	text-align: center;
+}
+
+.btn-action{
+	/*background-color: #F2E205;*/
+	background-image: linear-gradient(to right, #F29F05,#F2E205);
+	padding: 10px;
+	color: #fff;
+	border-radius: 4px;
+	text-decoration: none;
+	display: inline-block;
+	margin: 30px 0 0 0;
+	font-size: 1.6em;
+	text-shadow: 1px 1px 2px #000;
+	transition: box-shadow 0.5s;
+	box-shadow: 1px 1px 5px #000;
+}
+.btn-action:hover{
+	/*background-color: #BB2020;*/
+	background-image: linear-gradient(to right, #BB2020,#FF0005);
+	box-shadow: 1px 1px 10px #FF0005, 1px 1px 20px #BB2020, 1px 1px 30px #BB2020;
+}
+
+.container{
+	display: flex;
+	flex-flow: column;
+	color: white;
+	height: calc(100% - 150px);
+	width: 650px;
+	max-width: 90%;
+	justify-content: space-between;
+	margin-bottom: 50px;
+	border-radius: 10px;
+}
+
+.list{
+	width: 100%;
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+
+.musica
+{
+	width: calc(100%);
+	overflow: hidden;
+}
+
+.letra {
+	color: white;
+	width: 400px;
+	padding-left: 40px;
+	font-size: 17px;
+    line-height: 1.5;
+    font-weight: 200;
+    height: 700px;
+    overflow: auto;
+    padding-bottom: 30px;
+}
+
+.letra header{
+	margin: 10px 0 !important;
+	height: auto;
+}
+
+.letra::-webkit-scrollbar {
+    background: black;
+    width: 4px;
+}
+
+.letra::-webkit-scrollbar-thumb {
+    background: #F2E205;
+}
+
+.letra a{
+	color: #F2E205;
+	text-decoration: none;
+}
+
+.letra a:hover{
+	text-decoration: underline;
+
+}
+
+.content-musica
+{
+	position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    float: left;
+    height: 0;
+    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.content-musica iframe{
+	position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: black;
+}
+
+.list ul{
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	display: flex;
+	flex-flow: column;
+	width: 100%;
+	max-height: 320px
+}
+.list li{
+	height: 50px;
+	display: flex;
+	flex-flow: row;
+	justify-content: center;
+	align-items: center;
+}
+
+.list a{
+	color: white;
+	font-size: 1.1em;
+	text-decoration: none;
+	height: 50px;
+	line-height: 50px;
+	width: 100%;
+	padding: 0 5px;
+	/*border-radius: 7px 0 0 7px;*/
+	align-items: center;
+	text-shadow: 1px 1px 1px black;
+	white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transition: background-color 0.65s;
+}
+
+.list a:hover{
+	background-color: rgba(242,226,5,0.42);
+}
+
+.list a.active{
+	background-color: #F2E205;
+}
+
+
+body::-webkit-scrollbar {
+    background: black;
+    width: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #F2E205;
+}
+::selection {
+    background: #F2E205;
+    text-shadow: 0 1px 3px #3d3030;
+    color: #fbfbfb;
+}
+
+.list::-webkit-scrollbar {
+    background: black;
+    width: 4px;
+}
+
+.list::-webkit-scrollbar-thumb {
+    background: #F2E205;
+}
+
+/*990*/
+@media (max-width: 1100px){
+	.letra{
+		padding-left: 0;
+		padding-right: 0;
+		max-width: 650px;
+		width: 90%;
+ 	}
+}
+
+@media (max-width: 990px)
+{
+	.interface > header h1 a
+	{
+		font-size: 0.9em;
+	}
+
+	.background > header h1
+	{
+		font-size: 1.6em;
+		margin-bottom: 10px;
+	}
+	.background > header
+	{
+		margin-bottom: 10px;
+	}
+	/*.container
+	{
+		flex-flow: column-reverse;
+		align-items: center;
+	}
+	.musica{
+		width: 90%;
+		margin-bottom: 20px;
+	}
+	.list{
+		width: 90%;
+	}*/
+}
+
+@media (max-width: 580px)
+{
+	.interface > header h1 a
+	{
+		font-size: 0.7em;
+	}
+	.background > header h1
+	{
+		font-size: 1.3em;
+		margin-bottom: 5px;
+	}
+	.background > header
+	{
+		margin-bottom: 10px;
+	}
+}
