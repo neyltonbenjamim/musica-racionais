@@ -38,8 +38,8 @@ $base = 'https://racionaisoficial.com'
         <meta property="og:image:width" content="1280">
         <meta property="og:image:height" content="720">
         <meta property="og:image:type" content="image/jpeg" />
-
-        <link rel="canonical" href="<?= $base.$_SERVER['REQUEST_URI'];?>" />
+        <?php $watch = $_GET['watch']??$listMusic[0]['id'];?>
+        <link rel="canonical" href="<?= $base.'?watch='.$watch;?>" />
         <link rel="manifest" href="./manifest.json">
         <link rel="stylesheet" type="text/css" href="style.css">
 
