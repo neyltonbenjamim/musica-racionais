@@ -8,7 +8,7 @@ $musicas = [
 	['artista' => 'Racionais', 'id' => 'J9V9yackzzo','title' => 'Crime vai e vem'],
 	['artista' => 'Racionais', 'id' => 'HlHN8VSIRwE','title' => 'Da ponte pra cá'],
 	['artista' => 'Racionais', 'id' => 'dGFxdmuDA4A','title' => 'Diário de um Detento'],
-	['artista' => 'Racionais', 'id' => '6j29jz_Iwo8','title' => 'Eu sou 157'],
+	['artista' => 'Racionais', 'id' => 'fgysUhl98As','title' => 'Eu sou 157'],
 	['artista' => 'Racionais', 'id' => '27c_CPWdARU','title' => 'Expresso da meia noite'],
 	['artista' => 'Racionais', 'id' => '9nUHk06-bX4','title' => 'Fórmula Mágica da Paz'],
 	['artista' => 'Racionais', 'id' => 'oSxnR7cERpI','title' => 'Fim de semana no parque'],
