@@ -58,7 +58,8 @@ $base = 'https://racionaisoficial.com'
   "height":"720"
 }
 </script>
- 
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9096364258517971"
+     crossorigin="anonymous"></script>
 
     </head>
 
