@@ -213,7 +213,7 @@ $musicas = [
 
 	//7 Minutoz
 	['artista' => '7 Minutoz', 'id' => 'mKvpHbF7Cvs','title' => 'Rap do Goku (Dragon Ball Z)'],
-	// ['artista' => '7 Minutoz', 'id' => '','title' => ''],
+	['artista' => '7 Minutoz', 'id' => 'CvfNBZ3Sdvw','title' => 'Rap do Dragon Ball Z: Guerreiro Saiyajin'],
 	// ['artista' => '7 Minutoz', 'id' => '','title' => ''],
 	// ['artista' => '7 Minutoz', 'id' => '','title' => ''],
 
