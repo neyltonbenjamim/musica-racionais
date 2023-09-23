@@ -20,9 +20,9 @@ class Letra
 		$this->musica = $musica;
 	}
 
-	public function pegarLetra()
+	public function pegarLetra($update = false)
 	{
-		if(file_exists(self::PASTA.self::DS.$this->id.'.txt')){
+		if(file_exists(self::PASTA.self::DS.$this->id.'.txt') && $update == false){
 			return file_get_contents(self::PASTA.self::DS.$this->id.'.txt');
 		}
 
