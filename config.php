@@ -3,6 +3,16 @@ require 'data.php';
 define('BASE', 'http://localhost/aaaa/testes/racionais/');
 
 $watch = filter_input(INPUT_GET, 'watch',FILTER_SANITIZE_STRING);
+
+$artista_list = [];
+foreach($musicas as $key => $value){
+	$artista_list[] = $value['artista'];
+}
+
+
+$artista_list = array_unique($artista_list);
+
+
 shuffle($musicas);
 $listMusic = [];
 

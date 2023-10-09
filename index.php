@@ -81,16 +81,33 @@ $base = 'https://racionaisoficial.com'
                             <div id="player"></div>
                         </div>
                     </div>
+                    <select id="js_artista" class="list_artista">
+                        <option value="all">Artista: Todos</option>
+                        <?php foreach ($artista_list as $artista) : ?>
+                            <option <?= (isset($_GET['artista']) && $_GET['artista'] == $artista)?'selected':'';?> value="<?= $artista; ?>">Artista: <?= $artista; ?></option>
+                        <?php endforeach; ?>
+
+                    </select>
                     <div class="list">
                         <ul>
                             <!-- <li><a title="1 por Amor, 2 por Dinheiro" href="javascript:void(0);" class="next-musica active" data-id="7l-tp7yyJaE">1 por Amor, 2 por Dinheiro</a></li> -->
                             <?php foreach ($listMusic as $musica) : ?>
-                                <li>
-                                    <a title="<?= $musica['artista'] . ' - ' . $musica['title']; ?>" href="<?= $base . '?watch=' . $musica['id']; ?>" class="next-musica" id="<?= $musica['id']; ?>" data-artista="<?= $musica['artista']; ?>" data-title="<?= $musica['title']; ?>" data-id="<?= $musica['id']; ?>"><b><?= $musica['artista']; ?></b> - <?= $musica['title']; ?></a>
-                                    <?php if (isset($_GET['leg'])) : ?>
-                                        <a target="_blank" href="<?= "addLetra.php?id=" . $musica['id'] . "&artista=" . $musica['artista'] . "&title=" . $musica['title']; ?>">Legenda</a>
+
+                                <?php if (isset($_GET['artista']) && $_GET['artista'] != 'all') : ?>
+                                    <?php if ($_GET['artista'] === $musica['artista']) : ?>
+                                        <li>
+                                            <a title="<?= $musica['artista'] . ' - ' . $musica['title']; ?>" href="<?= $base . '?watch=' . $musica['id']."&artista=". urlencode($musica['artista']); ?>" class="next-musica" id="<?= $musica['id']; ?>" data-artista="<?= $musica['artista']; ?>" data-title="<?= $musica['title']; ?>" data-id="<?= $musica['id']; ?>"><b><?= $musica['artista']; ?></b> - <?= $musica['title']; ?></a>
+                                        </li>
                                     <?php endif; ?>
-                                </li>
+                                <?php else : ?>
+                                    <li>
+                                        <a title="<?= $musica['artista'] . ' - ' . $musica['title']; ?>" href="<?= $base . '?watch=' . $musica['id']; ?>" class="next-musica" id="<?= $musica['id']; ?>" data-artista="<?= $musica['artista']; ?>" data-title="<?= $musica['title']; ?>" data-id="<?= $musica['id']; ?>"><b><?= $musica['artista']; ?></b> - <?= $musica['title']; ?></a>
+                                        <?php if (isset($_GET['leg'])) : ?>
+                                            <a target="_blank" href="<?= "addLetra.php?id=" . $musica['id'] . "&artista=" . $musica['artista'] . "&title=" . $musica['title']; ?>">Legenda</a>
+                                        <?php endif; ?>
+                                    </li>
+                                <?php endif; ?>
+
                             <?php endforeach; ?>
                         </ul>
                     </div>

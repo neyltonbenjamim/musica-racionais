@@ -28,6 +28,10 @@ window.addEventListener('load',function(){
 			pegarLetra(this.getAttribute('data-id'),this.getAttribute('data-artista'),this.getAttribute('data-title'));
 		})
 	});
+
+	document.querySelector('#js_artista').addEventListener('change', function(){
+		location.href = location.origin+location.pathname+'?artista='+encodeURI(this.value);
+	})
 });
 
 window.addEventListener('popstate', function (event) {
