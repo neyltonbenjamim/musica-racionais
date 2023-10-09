@@ -141,7 +141,7 @@ $base = 'https://racionaisoficial.com'
 
         gtag('config', 'G-NKN7R5ZX8F');
     </script>
-    <script type="text/javascript" src="./main.js?v7"></script>
+    <script type="text/javascript" src="./main.js?v=8"></script>
 </body>
 
 </html>
