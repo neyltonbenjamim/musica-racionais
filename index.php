@@ -84,7 +84,7 @@ $base = 'https://racionaisoficial.com'
                     <select id="js_artista" class="list_artista">
                         <option value="all">Artista: Todos</option>
                         <?php foreach ($artista_list as $artista) : ?>
-                            <option <?= (isset($_GET['artista']) && $_GET['artista'] == $artista)?'selected':'';?> value="<?= $artista; ?>">Artista: <?= $artista; ?></option>
+                            <option <?= (isset($_GET['artista']) && $_GET['artista'] == $artista['artista'])?'selected':'';?> value="<?= $artista['artista']; ?>">Artista: <?= $artista['artista'].' '.$artista['categoria']; ?></option>
                         <?php endforeach; ?>
 
                     </select>

@@ -6,11 +6,9 @@ $watch = filter_input(INPUT_GET, 'watch',FILTER_UNSAFE_RAW);
 
 $artista_list = [];
 foreach($musicas as $key => $value){
-	$artista_list[] = $value['artista'];
+	$artista_list[$value['artista']] = ['artista' => $value['artista'], 'categoria' => $value['category']??''];
 }
 
-
-$artista_list = array_unique($artista_list);
 
 
 shuffle($musicas);
