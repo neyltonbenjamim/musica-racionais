@@ -50,6 +50,9 @@ $musicas = [
 	['artista' => 'Charlie Brown Jr', 'id' => 'spwnIS4WdxI', 'title' => 'Puro Sangue'],
 	['artista' => 'Charlie Brown Jr', 'id' => 'WidXbFRpNaU', 'title' => 'Só Pra Vadiar'],
 	['artista' => 'Charlie Brown Jr', 'id' => 'i7JeqZ1gcis', 'title' => 'Dias De Luta, Dias De Glória'],
+	['artista' => 'Charlie Brown Jr', 'id' => 'DzhwydXmtH4', 'title' => 'Céu Azul (Ao Vivo - Chegou Quem Faltava)'],
+	// ['id' => '', 'title' => ''],
+	// ['id' => '', 'title' => ''],
 	// ['id' => '', 'title' => ''],
 
 	//Charlie Brown Jr. e Vanessa da Mata
