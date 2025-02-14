@@ -33,7 +33,6 @@ class Letra
 
 	public function buscarLetra()
 	{
-		$testes = $this->http();
 		$letra = (object) json_decode($this->http());
 		if($letra->type === 'exact'){
 			$body  = '<header><h1>'."Letra {$letra->mus[0]->name} - {$letra->art->name}</h1></header>";
@@ -61,9 +60,10 @@ class Letra
 
 	private function http()
 	{
+		$url = self::BASE."?art=".urlencode($this->artista)."&mus=".urlencode($this->musica)."&apiKey={$this->chave}";
 		$curl = curl_init();
 		curl_setopt_array($curl,[
-			CURLOPT_URL => self::BASE."?art=".urlencode($this->artista)."&mus=".urlencode($this->musica)."&apiKey={$this->chave}",
+			CURLOPT_URL => $url,
 			CURLOPT_RETURNTRANSFER => true,
 			CURLOPT_ENCODING => '',
 			CURLOPT_MAXREDIRS => 10,

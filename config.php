@@ -2,7 +2,7 @@
 require 'data.php';
 define('BASE', 'http://localhost/aaaa/testes/racionais/');
 
-$watch = filter_input(INPUT_GET, 'watch',FILTER_SANITIZE_STRING);
+$watch = filter_input(INPUT_GET, 'watch',FILTER_UNSAFE_RAW);
 
 $artista_list = [];
 foreach($musicas as $key => $value){

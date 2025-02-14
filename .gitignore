@@ -4,3 +4,7 @@ video.php
 letras
 .htaccess
 ads.txt
+error.log
+error_log
+buscar-letra/
+testes.php
