@@ -283,6 +283,22 @@ $musicas = [
 	// ['artista' => '7 Minutoz', 'id' => '','title' => ''],
 
 	//Bob Marley
-	['artista' => 'Bob Marley', 'id' => 'NOyRsPDPfMM', 'title' => 'Three Little Birds'],
+	['artista' => 'Bob Marley', 'id' => '69RdQFDuYPI', 'title' => 'Bob Marley - Is This Love (Official Music Video)'],
+	['artista' => 'Bob Marley', 'id' => 'Y8nPBeQfms4', 'title' => 'On People - Bob Marley Quotes (BobMarley.com)'],
+	['artista' => 'Bob Marley', 'id' => 'cUS8MA5vptA', 'title' => 'Bob Marley & The Wailers - One Love / People Get Ready (Audio)'],
+	['artista' => 'Bob Marley', 'id' => 'VnZ6rTb1_1o', 'title' => 'Bob Marley: LEGACY "75 Years A Legend"'],
+	['artista' => 'Bob Marley', 'id' => 'oqVy6eRXc7Q', 'title' => 'Bob Marley & The Wailers - Jamming (Official Music Video)'],
+	['artista' => 'Bob Marley', 'id' => 'beBpQbF_FUc', 'title' => 'On Reggae & Rasta - Bob Marley Quotes (BobMarley.com)'],
+	['artista' => 'Bob Marley', 'id' => '1ti2YCFgCoI', 'title' => 'Bob Marley & The Wailers - Could You Be Loved (Official Music Video)'],
+	['artista' => 'Bob Marley', 'id' => 'rf8GjhXvOjU', 'title' => 'Bob Marley & The Wailers - Stir It Up (Live at The Old Grey Whistle, 1973)'],
+	['artista' => 'Bob Marley', 'id' => 'fmr2jffdIQ0', 'title' => 'Bob Marley: LEGACY "Rhythm of the Game"'],
+	['artista' => 'Bob Marley', 'id' => '43cfPgZ8cU8', 'title' => 'Bob Marley & The Wailers - Exodus (Live At The Rainbow 4th June 1977)'],
+	['artista' => 'Bob Marley', 'id' => 'uMUQMSXLlHM', 'title' => 'Bob Marley & The Wailers - Buffalo Soldier (Official Music Video)'],
+	['artista' => 'Bob Marley', 'id' => '-2CqPzczb-g', 'title' => 'Bob Marley: LEGACY "Women Rising"'],
+	['artista' => 'Bob Marley', 'id' => 'IT8XvzIfi4U', 'title' => 'Bob Marley - No Woman, No Cry (Official Video)'],
+	['artista' => 'Bob Marley', 'id' => 'RaeH2fmR42w', 'title' => 'On Haile Selassie - Bob Marley Quotes (BobMarley.com)'],
+	['artista' => 'Bob Marley', 'id' => 'HNBCVM4KbUM', 'title' => 'Bob Marley & The Wailers - Three Little Birds (Official Music Video)'],
+	['artista' => 'Bob Marley', 'id' => 'Ou_ZBxWvjGs', 'title' => 'Bob Marley - Last Words to his Fans'],
+
 
 ];
