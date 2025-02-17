@@ -96,7 +96,7 @@ $base = 'https://racionaisoficial.com'
                             $musica_count_artista = 1;
                             foreach ($listMusic as $musica) : ?>
 
-                                <?php if (isset($_GET['artista']) && $_GET['artista'] != 'all') : ?>
+                                <?php if (isset($_GET['artista']) && $_GET['artista'] != 'all') : $_GET['artista'] = urldecode($_GET['artista']); ?>
                                     <?php if ($_GET['artista'] === $musica['artista']) : ?>
                                         <li>
                                             <a title="<?= $musica['artista'] . ' - ' . $musica['title']; ?>" href="<?= $base . '?watch=' . $musica['id']."&artista=". urlencode($musica['artista']); ?>" class="next-musica" id="<?= $musica['id']; ?>" data-artista="<?= $musica['artista']; ?>" data-title="<?= $musica['title']; ?>" data-id="<?= $musica['id']; ?>"><b><?= $musica_count_artista.' '. $musica['artista']; ?></b> - <?= $musica['title']; ?></a>
