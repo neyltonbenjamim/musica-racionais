@@ -294,11 +294,56 @@ $musicas = [
 	['artista' => 'Bob Marley', 'id' => 'fmr2jffdIQ0', 'title' => 'Bob Marley: LEGACY "Rhythm of the Game"'],
 	['artista' => 'Bob Marley', 'id' => '43cfPgZ8cU8', 'title' => 'Bob Marley & The Wailers - Exodus (Live At The Rainbow 4th June 1977)'],
 	['artista' => 'Bob Marley', 'id' => 'uMUQMSXLlHM', 'title' => 'Bob Marley & The Wailers - Buffalo Soldier (Official Music Video)'],
-	['artista' => 'Bob Marley', 'id' => '-2CqPzczb-g', 'title' => 'Bob Marley: LEGACY "Women Rising"'],
 	['artista' => 'Bob Marley', 'id' => 'IT8XvzIfi4U', 'title' => 'Bob Marley - No Woman, No Cry (Official Video)'],
 	['artista' => 'Bob Marley', 'id' => 'RaeH2fmR42w', 'title' => 'On Haile Selassie - Bob Marley Quotes (BobMarley.com)'],
 	['artista' => 'Bob Marley', 'id' => 'HNBCVM4KbUM', 'title' => 'Bob Marley & The Wailers - Three Little Birds (Official Music Video)'],
 	['artista' => 'Bob Marley', 'id' => 'Ou_ZBxWvjGs', 'title' => 'Bob Marley - Last Words to his Fans'],
 
+	//luiz gonzaga
+	['artista' => 'Luiz Gonzaga', 'id' => 'Ou_ZBxWvjGs', 'title' => 'Asa Branca'],
+	['artista' => 'Luiz Gonzaga', 'id' => '1_ll4ccSBvU', 'title' => 'O Chêro da Carolina'],
+	['artista' => 'Luiz Gonzaga', 'id' => '2G2mDtQWQrk', 'title' => 'A Vida do Viajante'],
+	['artista' => 'Luiz Gonzaga', 'id' => '97S4U2mfJfA', 'title' => 'Juazeiro'],
+	['artista' => 'Luiz Gonzaga', 'id' => 'mwFGvGMxotc', 'title' => 'Baião'],
+	['artista' => 'Luiz Gonzaga', 'id' => 'raTNK09E0uY', 'title' => 'Qui nem Jiló'],
 
+	//Alceu Valença
+	['artista' => 'Alceu Valença', 'id' => '1_ll4ccSBvU', 'title' => 'Flor de Tangerina'],
+
+	//Vitor Kley
+	['artista' => 'Vitor Kley', 'id' => 'YVJijQIualA', 'title' => 'O Sol'],
+
+	//Barão Vermelho
+	['artista' => 'Barão Vermelho', 'id' => 'sQzT4VObtZs', 'title' => 'Pro Dia Nascer Feliz'],
+
+	//Cazuza
+	['artista' => 'Cazuza', 'id' => '6tnc-rBZJL4', 'title' => 'O Tempo não Pára'],
+
+	//Vinícius de Moraes
+
+	//Adoniran Barbosa
+
+	//Elis Regina 
+
+	//Milton Nascimento
+
+	//Egberto Gismonti
+
+	//Cartola
+
+	//Dorival Caymmi
+
+	//Pixinguinha
+
+	//Noel Rosa
+
+	//Gilberto Gil
+
+	//Caetano Veloso
+
+	//Chico Buarque
+
+	//Tom Jobim (Antônio Carlos Jobim)
+
+	//Heitor Villa-Lobos
 ];
