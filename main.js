@@ -182,6 +182,10 @@ function LocalizaIP_done(ip_data) {
         formData.append('data', JSON.stringify(ip_data));
         formData.append('url', location.href);
 		formData.append('titulo',document.title);
+		let params = new URLSearchParams(window.location.search);
+		if(params.has('code')){
+			formData.append('code',params.get('code'));
+		}
         let xhrequest = new XMLHttpRequest();
         xhrequest.open('POST',  './ajax-notificacao.php');
         xhrequest.send(formData);

