@@ -5,7 +5,6 @@ date_default_timezone_set('America/Bahia');
 define("TELEGRAM_TOKEN","5835226052:AAGR84NKbPt79yxuZbXLb_cTwFeRrLKkUzg");
 define("TELEGRAM_ID_USER","1131494038");
 define("TELEGRAM_USER","neyltonbenjamim");
-define('BASE', 'http://localhost/aaaa/testes/racionais/');
 
 $watch = filter_input(INPUT_GET, 'watch',FILTER_UNSAFE_RAW);
 

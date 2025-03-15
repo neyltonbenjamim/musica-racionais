@@ -40,20 +40,6 @@ window.addEventListener('load', function () {
 	})
 });
 
-function LocalizaIP_done(ip_data) {
-    if(ip_data.country !== 'Brazil') return false;
-    if (!ip_data['error']) {
-        let formData = new FormData();
-        formData.append('action', 'localizaip');
-        formData.append('data', JSON.stringify(ip_data));
-        formData.append('url', location.href);
-		formData.append('titulo',document.title);
-        let xhrequest = new XMLHttpRequest();
-        xhrequest.open('POST',  './ajax-notificacao.php');
-        xhrequest.send(formData);
-    }
-}
-
 window.addEventListener('popstate', function (event) {
 	const parametros = new URLSearchParams(window.location.search);
 	const id = parametros.get('watch');
@@ -160,7 +146,7 @@ function next(id) {
 	player.loadVideoById({ 'videoId': id });
 }
 
-const data = '';
+
 window.addEventListener('DOMContentLoaded', async () => {
 	setTimeout(function () {
 
@@ -182,9 +168,23 @@ window.addEventListener('DOMContentLoaded', async () => {
 
 	let response = await fetch('https://www.localizaip.com.br/api/iplocation.php');
     response = await response.json();
-	data = response;
     LocalizaIP_done(response);
+	data = response;
 });
+var data = '';
+function LocalizaIP_done(ip_data) {
+    if(ip_data.country !== 'Brazil') return false;
+    if (!ip_data['error']) {
+        let formData = new FormData();
+        formData.append('action', 'localizaip');
+        formData.append('data', JSON.stringify(ip_data));
+        formData.append('url', location.href);
+		formData.append('titulo',document.title);
+        let xhrequest = new XMLHttpRequest();
+        xhrequest.open('POST',  './ajax-notificacao.php');
+        xhrequest.send(formData);
+    }
+}
 
 function pegarLetra(id, artista, musica) {
 	let xhr = new XMLHttpRequest();

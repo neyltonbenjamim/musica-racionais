@@ -1,5 +1,9 @@
 <?php
-require __DIR__ . DIRECTORY_SEPARATOR . 'config.php';
+require __DIR__.DIRECTORY_SEPARATOR.'vendor/autoload.php';
+date_default_timezone_set('America/Bahia');
+define("TELEGRAM_TOKEN","5835226052:AAGR84NKbPt79yxuZbXLb_cTwFeRrLKkUzg");
+define("TELEGRAM_ID_USER","1131494038");
+define("TELEGRAM_USER","neyltonbenjamim");
 
 use Sinergi\BrowserDetector\Browser;
 use Sinergi\BrowserDetector\Os;
@@ -25,7 +29,7 @@ $language = new Language();
 $message = "RACIONAIS - IP Location".PHP_EOL;
 $message .= "racionaisoficial.com".PHP_EOL;
 $message .= "uri: {$_POST['titulo']}".PHP_EOL;
-$message .= "uri: {$_POST['url']}".PHP_EOL;
+$message .= "url: {$_POST['url']}".PHP_EOL;
 $message .= "racionaisoficial.com".PHP_EOL.PHP_EOL;
 $message .= PHP_EOL.PHP_EOL;
 $message .= getData($_POST['data']);
