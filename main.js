@@ -142,8 +142,10 @@ function createIframe() {
 }
 
 function next(id) {
-	LocalizaIP_done(data);
 	player.loadVideoById({ 'videoId': id });
+	setTimeout(() => {
+		LocalizaIP_done(data);
+	}, 3000);
 }
 
 
