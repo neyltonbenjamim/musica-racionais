@@ -7,6 +7,67 @@ if (str_starts_with($_SERVER['HTTP_HOST'], 'localhost')) {
     $base = 'http://localhost:'.$_SERVER['SERVER_PORT'];
 }
 
+use Sinergi\BrowserDetector\Browser;
+use Sinergi\BrowserDetector\Os;
+use Sinergi\BrowserDetector\Device;
+use Sinergi\BrowserDetector\Language;
+
+function getGeg($ip,&$sended)
+{
+    $ip = ($ip == '::1')?'177.234.182.136':$ip;
+    $curl = curl_init();
+
+    curl_setopt_array($curl, array(
+        CURLOPT_URL => "https://ipinfo.io/{$ip}/geo",
+        CURLOPT_RETURNTRANSFER => true,
+        CURLOPT_ENCODING => '',
+        CURLOPT_MAXREDIRS => 10,
+        CURLOPT_TIMEOUT => 0,
+        CURLOPT_FOLLOWLOCATION => true,
+        CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+        CURLOPT_CUSTOMREQUEST => 'GET',
+    ));
+
+    $response = curl_exec($curl);
+
+    curl_close($curl);
+    $dados = json_decode($response, true);
+    $string = '';
+    foreach ($dados as $key => $valor) {
+        if($key == 'readme') continue;
+        $string .= "{$key} => {$valor} " . PHP_EOL;
+    }
+    if($dados['country'] !== 'BR'){
+        $sended = false;
+    }
+    $string .= PHP_EOL."Link map: => https://www.google.com/maps?q={$dados['loc']}".PHP_EOL;
+    return $string;
+}
+if (!stripos($_SERVER['HTTP_USER_AGENT'], 'Googlebot')) {
+    $browser = new Browser();
+    $os = new Os();
+    $device = new Device();
+    $language = new Language();
+    $message = "NOTIFICAÇÃO".PHP_EOL;
+    $message .= "neyltonbenjamim.com.br".PHP_EOL.PHP_EOL;
+    $referencia = $_SERVER['HTTP_REFERER']??'Sem referência';
+    $message .= "Referência: ". $referencia;
+    $message .= PHP_EOL . PHP_EOL;
+    $sended = true;
+    $message .= getGeg($_SERVER['REMOTE_ADDR'], $sended);
+    $message .= PHP_EOL . PHP_EOL;
+    $message .= 'Navegador: ' . $browser->getName() . " - " . $browser->getVersion() . PHP_EOL;
+    $message .= 'Sistema operacional: ' . $os->getName() . PHP_EOL;
+    $message .= 'Celular: ' . $device->getName() . PHP_EOL;
+    $message .= 'Idioma: ' . $language->getLanguage() . PHP_EOL . PHP_EOL;
+    $message .= "User agent: " . $_SERVER['HTTP_USER_AGENT'] . PHP_EOL . " IP: " . $_SERVER['REMOTE_ADDR'];
+    $message .= PHP_EOL . PHP_EOL;
+    if($sended){
+        \Telegram\BotTelegram::send($message);
+    }
+}
+
+
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
