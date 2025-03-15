@@ -39,7 +39,13 @@ window.addEventListener('load', function () {
 	});
 
 	document.querySelector('#js_artista').addEventListener('change', function () {
-		location.href = location.origin + location.pathname + '?artista=' + encodeURI(this.value);
+		
+		let params = new URLSearchParams(window.location.search);
+		let search = '';
+		if(params.has('code')){
+			search += '&code='+params.get('code');
+		}
+		location.href = location.origin + location.pathname + '?artista=' + encodeURI(this.value)+search;
 	})
 });
 
