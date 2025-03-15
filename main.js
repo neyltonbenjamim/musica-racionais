@@ -55,7 +55,7 @@ window.addEventListener('popstate', function (event) {
 	next(id);
 	let active = document.querySelector('.active');
 	active.classList.remove('active');
-	document.getElementById($id).classList.add('active');
+	document.getElementById(id).classList.add('active');
 	document.querySelector('.js_title').innerHTML = 'Ouvir Música - ' + document.getElementById($id).getAttribute('data-title');
 	document.title = 'Ouvir Música - ' + document.getElementById($id).getAttribute('data-title');
 	pegarLetra($id, document.getElementById($id).getAttribute('data-artista'), document.getElementById($id).getAttribute('data-title'));
