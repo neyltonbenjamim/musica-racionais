@@ -132,7 +132,8 @@ if (str_starts_with($_SERVER['HTTP_HOST'], 'localhost')) {
         <footer>
 
             <!-- <p>&copy; Todos direitos reservados 2021</p> -->
-            <p>Desenvolvido por&nbsp;
+            <p> 
+                2021 - <?= (new DateTime())->format('Y');?> Desenvolvido por&nbsp;
                 <a href="https://api.whatsapp.com/send?phone=5577988378941" target="_blank">Neylton Benjamim</a>
             </p>
 
