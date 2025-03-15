@@ -27,7 +27,7 @@ window.addEventListener('load', function () {
 				search = '?watch=' + this.getAttribute('data-id') + '&artista=' + params.get('artista').replaceAll(' ', '+');
 			}
 			if(params.has('code')){
-				search += '&code='+params.get(code);
+				search += '&code='+params.get('code');
 			}
 			
 			history.pushState({ title: this.getAttribute('title') }, search, search);
@@ -108,7 +108,7 @@ function onPlayerStateChange(event) {
 			}
 
 			if(params.has('code')){
-				search += '&code='+params.get(code);
+				search += '&code='+params.get('code');
 			}
 
 			history.pushState({ title: a.getAttribute('title') }, search, search);
@@ -129,7 +129,7 @@ function onPlayerStateChange(event) {
 			search = '?watch=' + a.getAttribute('data-id') + '&artista=' + params.get('artista').replaceAll(' ', '+');
 		}
 		if(params.has('code')){
-			search += '&code='+params.get(code);
+			search += '&code='+params.get('code');
 		}
 
 		history.pushState({ title: activeFirst.getAttribute('title') }, search, search);
