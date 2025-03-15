@@ -26,7 +26,10 @@ window.addEventListener('load', function () {
 			if (params.has('artista')) {
 				search = '?watch=' + this.getAttribute('data-id') + '&artista=' + params.get('artista').replaceAll(' ', '+');
 			}
-			console.log(decodeURI(search));
+			if(params.has('code')){
+				search += '&code='+params.get(code);
+			}
+			
 			history.pushState({ title: this.getAttribute('title') }, search, search);
 			document.querySelector('.js_title').innerHTML = 'Ouvir Música - ' + this.getAttribute('title');
 			document.title = 'Ouvir Música - ' + this.getAttribute('title');
@@ -104,7 +107,11 @@ function onPlayerStateChange(event) {
 				search = '?watch=' + a.getAttribute('data-id') + '&artista=' + params.get('artista').replaceAll(' ', '+');
 			}
 
-			history.pushState({ title: a.getAttribute('title') }, search, '?watch=' + search);
+			if(params.has('code')){
+				search += '&code='+params.get(code);
+			}
+
+			history.pushState({ title: a.getAttribute('title') }, search, search);
 
 			document.querySelector('.js_title').innerHTML = 'Ouvir Música - ' + a.getAttribute('title');
 			document.title = 'Ouvir Música - ' + a.getAttribute('title');
@@ -120,6 +127,9 @@ function onPlayerStateChange(event) {
 		let params = new URLSearchParams(window.location.search);
 		if (params.has('artista')) {
 			search = '?watch=' + a.getAttribute('data-id') + '&artista=' + params.get('artista').replaceAll(' ', '+');
+		}
+		if(params.has('code')){
+			search += '&code='+params.get(code);
 		}
 
 		history.pushState({ title: activeFirst.getAttribute('title') }, search, search);

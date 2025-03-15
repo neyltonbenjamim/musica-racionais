@@ -27,8 +27,8 @@ $os = new Os();
 $device = new Device();
 $language = new Language();
 $message = "RACIONAIS - IP Location".PHP_EOL;
-if(isset($_GET['code']) && !empty($_GET['code'])){
-    $message .= "CODE: ".base64_decode($_GET['code']).PHP_EOL;
+if(isset($_POST['code']) && !empty($_POST['code'])){
+    $message .= "CODE: ".base64_decode($_POST['code']).PHP_EOL;
 }
 $message .= "racionaisoficial.com".PHP_EOL.PHP_EOL;
 $message .= "Título: {$_POST['titulo']}".PHP_EOL.PHP_EOL;
