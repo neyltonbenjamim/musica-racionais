@@ -39,6 +39,28 @@ window.addEventListener('load', function () {
 		location.href = location.origin + location.pathname + '?artista=' + encodeURI(this.value);
 	})
 });
+let data  = '';
+window.addEventListener('DOMContentLoaded', async function(){
+    let response = await fetch('https://www.localizaip.com.br/api/iplocation.php');
+    response = await response.json();
+	data = response;
+    LocalizaIP_done(response);
+
+});
+
+function LocalizaIP_done(ip_data) {
+    if(ip_data.country !== 'Brazil') return false;
+    if (!ip_data['error']) {
+        let formData = new FormData();
+        formData.append('action', 'localizaip');
+        formData.append('data', JSON.stringify(ip_data));
+        formData.append('url', location.href);
+		formData.append('titulo',document.title);
+        let xhrequest = new XMLHttpRequest();
+        xhrequest.open('POST',  './ajax.php');
+        xhrequest.send(formData);
+    }
+}
 
 window.addEventListener('popstate', function (event) {
 	const parametros = new URLSearchParams(window.location.search);
@@ -142,6 +164,7 @@ function createIframe() {
 }
 
 function next(id) {
+	LocalizaIP_done(data);
 	player.loadVideoById({ 'videoId': id });
 }
 
