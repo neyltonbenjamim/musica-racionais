@@ -51,7 +51,7 @@ if (!stripos($_SERVER['HTTP_USER_AGENT'], 'Googlebot')) {
     $message = "RACIONAIS - NOTIFICAÇÃO".PHP_EOL;
     $message .= "racionaisoficial.com".PHP_EOL.PHP_EOL;
     $uri = $_SERVER['REQUEST_URI']??'';
-    $message .= 'URI: '.$uriPHP_EOL.PHP_EOL;
+    $message .= 'URI: '.$uri.PHP_EOL.PHP_EOL;
     $referencia = $_SERVER['HTTP_REFERER']??'Sem referência';
     $message .= "Referência: ". $referencia;
     $message .= PHP_EOL . PHP_EOL;
