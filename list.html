@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Links Tech</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background-color: #0e0e10;
+      color: #e0e0e0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 2rem;
+    }
+
+    header {
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      color: #00ffe7;
+      text-shadow: 0 0 5px #00ffe7;
+    }
+
+    p {
+      font-size: 1rem;
+      color: #aaa;
+    }
+
+    .link-list {
+      width: 100%;
+      max-width: 600px;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .link-item {
+      background-color: #1a1a1d;
+      border-left: 4px solid #00ffe7;
+      padding: 1rem;
+      border-radius: 8px;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .link-item:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 4px 20px rgba(0, 255, 231, 0.2);
+    }
+
+    .link-item a {
+      color: #00ffe7;
+      text-decoration: none;
+      font-size: 1.1rem;
+      font-weight: bold;
+    }
+
+    .link-item span {
+      display: block;
+      font-size: 0.9rem;
+      color: #888;
+      margin-top: 4px;
+    }
+
+    footer {
+      margin-top: 3rem;
+      font-size: 0.8rem;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>🌐 Meus Links Tech</h1>
+    <p>Explorando o mundo da tecnologia</p>
+  </header>
+
+  <section class="link-list">
+    <div class="link-item">
+      <a href="./app/" target="_blank">App</a>
+      <span>(Câmera, Screen, Foto, Áudio e Video)</span>
+    </div>
+    <div class="link-item">
+      <a href="./base64/" target="_blank">Base64</a>
+      <span>Codifique e descodifique</span>
+    </div>
+    <div class="link-item">
+        <a href="./md5/" target="_blank">MD5</a>
+        <span>Codifique e descodifique</span>
+      </div>
+    <div class="link-item">
+      <a href="./cnpj/" target="_blank">CNPJ 1v</a>
+      <span>Buscar dados das empresas</span>
+    </div>
+    <div class="link-item">
+        <a href="./cnpj/cnpj.php" target="_blank">CNPJ 2v</a>
+        <span>Buscar dados das empresas</span>
+      </div>
+    <div class="link-item">
+      <a href="./preco-da-hora/" target="_blank">Preço da Hora - BA</a>
+      <span>Confira os preços dos mercados em Santa Maria da Vitória - BA</span>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 - Desenvolvido por Neylton Benjamim
+  </footer>
+</body>
+</html>
