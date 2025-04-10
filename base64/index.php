@@ -34,4 +34,4 @@ $url = match ($_GET['tipo']) {
 
 echo $url;
 echo "\n<br> <div style='border-bottom:2px solid #e74c3c;margin:20px auto;'></div>";
-echo '<a target="_blank" href="' . $url . '">' . $url . '</a>';
+// echo '<a target="_blank" href="' . $url . '">' . $url . '</a>';

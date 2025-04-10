@@ -13,4 +13,4 @@ if(empty($_GET['token'])){
 }
 $url = md5($_GET['token']);
 echo $url.'<br>';
-echo '<a target="_blank" href="'.$url.'">'.$url.'</a>';
+// echo '<a target="_blank" href="'.$url.'">'.$url.'</a>';
